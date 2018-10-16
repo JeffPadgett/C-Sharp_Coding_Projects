@@ -8,11 +8,14 @@ namespace TwentyOne
 {
     public class Deck
     {
-            //A way of imediatley asigning values to an object upon creation.
+        //A way of imediatley asigning values to an object upon creation.
         public Deck()
         {
             Cards = new List<Card>();
-            List<string> Suits = new List<string>() { "Clubs", "Diamonds", "Hearts", "Spades" };
+
+            List<string> Suits = new List<string>()
+            { "Clubs", "Diamonds", "Hearts", "Spades" };
+
             List<string> Faces = new List<string>()
             {
                 "Two","Three", "Four", "Five","Six","Seven",
@@ -31,5 +34,20 @@ namespace TwentyOne
             }
         }
         public List<Card> Cards { get; set; }
+
+
+        public void Shuffle(int times = 1)
+        {
+            List<Card> TempList = new List<Card>();
+            Random random = new Random();
+
+            while (Cards.Count > 0)
+            {
+                int randomIndex = random.Next(0, Cards.Count);
+                TempList.Add(Cards[randomIndex]);
+                Cards.RemoveAt(randomIndex);
+            }
+            Cards = TempList;
+        }
     }
 }

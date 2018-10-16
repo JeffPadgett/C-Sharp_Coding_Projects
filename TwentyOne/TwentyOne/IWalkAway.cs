@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace TwentyOne
 {
-    public class Card
+    interface IWalkAway //Naming convention is to start interfaces always with an uppercase letter.
     {
-        public Card()
-        {
-
-        }
-
-        public string Suit { get; set; }
-        public string Face { get; set; }
+        void WalkAway(Player player);
     }
 }
