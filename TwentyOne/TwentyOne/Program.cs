@@ -8,16 +8,29 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to BestBet! Let's start by telling me your name. ");
+            string playerName = Console.ReadLine();
+            Console.WriteLine("How many chips do you want?");
+            int chips = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Hello, {0}. Would you like to play Black Jack right now?", playerName);
+            string answer = Console.ReadLine().ToLower();
 
-            Deck blueDeck = new Deck();
-            blueDeck.Shuffle(3);
-
-            foreach (Card card in blueDeck.Cards)
+            if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "ya")
             {
-                Console.WriteLine(card.Face + " of " + card.Suit);
+                Player player = new Player(playerName, chips);
+                Game game = new TwentyOneGame();
+                game += player;
+
+                player.isActivelyPlaying = true;
+                while (player.isActivelyPlaying && player.Balance > 0)
+                {
+                    game.Play();
+                }
+                game -= player;
+                Console.WriteLine("Thank you for playing!");
             }
-            Console.WriteLine(blueDeck.Cards.Count);
-            Console.ReadLine();
+            Console.WriteLine("Feel free to look around the casino. Buy for now.");
+            Console.Read();
         }
 
 
