@@ -23,7 +23,7 @@ namespace TwentyOne
 
         public bool Bet(int amount)
         {
-            if (Balance - amount <= 0)
+            if (Balance - amount < 0)
             {
                 Console.WriteLine("You do not have enough chips");
                 return false;

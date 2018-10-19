@@ -29,7 +29,7 @@ namespace TwentyOne
                 game -= player;
                 Console.WriteLine("Thank you for playing!");
             }
-            Console.WriteLine("Feel free to look around the casino. Buy for now.");
+            Console.WriteLine("Feel free to look around the casino. Bye for now.");
             Console.Read();
         }
 
