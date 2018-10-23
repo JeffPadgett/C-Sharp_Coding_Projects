@@ -1,22 +1,3 @@
-c:\users\jp171\documents\visual studio 2015\Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe.config
-c:\users\jp171\documents\visual studio 2015\Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe
-c:\users\jp171\documents\visual studio 2015\Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.pdb
-c:\users\jp171\documents\visual studio 2015\Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.csprojResolveAssemblyReference.cache
-c:\users\jp171\documents\visual studio 2015\Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.exe
-c:\users\jp171\documents\visual studio 2015\Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.pdb
-<<<<<<< HEAD
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe.config
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.exe
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.pdb
-=======
-C:\Users\jp171\OneDrive\Desktop\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.csprojAssemblyReference.cache
-C:\Users\jp171\OneDrive\Desktop\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.csproj.CoreCompileInputs.cache
-C:\Users\jp171\OneDrive\Desktop\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.exe
-C:\Users\jp171\OneDrive\Desktop\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.pdb
-C:\Users\jp171\OneDrive\Desktop\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe.config
-C:\Users\jp171\OneDrive\Desktop\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe
-C:\Users\jp171\OneDrive\Desktop\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.pdb
->>>>>>> d9ec012067712b02c5d45006bbba76dea6f1af8d
-C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe
-C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.pdb
-C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.csprojResolveAssemblyReference.cache

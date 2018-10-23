@@ -7,3 +7,6 @@ c:\users\jp171\documents\visual studio 2015\Projects\TwentyOne\TwentyOne\obj\Deb
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe.config
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\TwentyOne\obj\Debug\TwentyOne.exe
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\TwentyOne\obj\Debug\TwentyOne.pdb
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\TwentyOne\bin\Debug\TwentyOne.pdb
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\TwentyOne\obj\Debug\TwentyOne.csprojResolveAssemblyReference.cache
