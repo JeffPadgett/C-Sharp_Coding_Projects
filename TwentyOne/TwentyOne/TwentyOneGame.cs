@@ -151,6 +151,7 @@ namespace TwentyOne
                     Console.WriteLine("Dealer wins {0}!", Bets[player]);
                     Dealer.Balance += Bets[player];
                 }
+
                 Console.WriteLine("Play again?");
                 string answer = Console.ReadLine().ToLower();
                 if (answer == "yes" || answer == "yeah" || answer == "ya" || answer == "yes please")
