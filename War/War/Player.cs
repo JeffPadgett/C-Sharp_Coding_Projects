@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace War
 {
-    class Player
+    public class Player
     {
+        public Game Game { get; set; }
         public Player(string name, int beginningBalance)
         {
             Hand = new List<Card>();
@@ -19,7 +20,7 @@ namespace War
         public int Balance { get; set; }
         public string Name { get; set; }
         public bool isActivelyPlaying { get; set; }
-        public bool Stay { get; set; }
+        public int CurrentBet { get; set; }
 
         public bool Bet(int amount)
         {
@@ -31,10 +32,24 @@ namespace War
             else
             {
                 Balance -= amount;
+                CurrentBet = amount;
                 return true;
             }
         }
 
+        public void AddMoney()
+        {
+            Balance += CurrentBet * 2;
+        }
+
+        public void LostHand()
+        {
+            if (Balance == 0)
+            {
+                Game.RemovePlayer(this);
+                Console.WriteLine(this.Name + " Lost all their money, tries to flip the table, and securty throws them out.");
+            }
+        }
 
         public static Game operator +(Game game, Player player)
         {

@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace War
 {
-    class Card
+    public class Card
     {
         public Suit Suit { get; set; }
         public Face Face { get; set; }
+
+        public override string ToString()
+        {
+            return this.Face + " of " + this.Suit;
+        }
     }
 
     public enum Suit

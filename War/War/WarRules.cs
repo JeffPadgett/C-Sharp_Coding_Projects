@@ -9,7 +9,7 @@ namespace War
     
     class WarRules
     {
-
+       
 
     }
 }

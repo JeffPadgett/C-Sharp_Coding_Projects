@@ -6,7 +6,94 @@ using System.Threading.Tasks;
 
 namespace War
 {
-    class WarGame
+   public class WarGame : Game
     {
+        Dealer warDealer = new Dealer();
+        public static List<Card> disCards;
+        
+          
+        public WarGame()
+        {
+            disCards = new List<Card>();
+            warDealer.BurnCard(); //Evertime the game is started the dealer burns a card
+        }
+
+        public void WarBet(Player player)
+        {
+            if (!player.Bet(Int32.Parse(Console.ReadLine())))
+                {
+                Console.Write(player.Name + " Place your bet: $ ");
+                WarBet(player);
+                }
+
+                
+        }
+
+        public void GoToWar(Player p)
+        {
+            warDealer.BurnCard();
+            warDealer.BurnCard();
+            warDealer.BurnCard();
+            warDealer.DealCard(p);
+            warDealer.BurnCard();
+            warDealer.BurnCard();
+            warDealer.BurnCard();
+            warDealer.DealSelf();
+            warDealer.CompareHands(p);
+        }
+
+
+        public override void Play()
+        {
+
+            foreach (Player player in Players)
+            {
+                if (!player.isActivelyPlaying)
+                    continue;
+                Console.WriteLine(player.Name + " has $" + player.Balance );
+                Console.Write(player.Name + " Place your bet: $ ");
+                WarBet(player);
+
+            }
+
+            foreach (Player player in Players)
+            {
+                if (!player.isActivelyPlaying)
+                    continue;
+                warDealer.DealCard(player);
+
+            }
+
+            warDealer.DealSelf();
+            
+            foreach (Player player in Players)
+            {
+                if (!player.isActivelyPlaying)
+                    continue;
+                if (warDealer.CompareHands(player))
+                {
+                    string answer = Console.ReadLine();
+                    if (answer.ToLower() == "y")
+                    {
+                        Console.WriteLine("{0} goes to war.",player.Name);
+                        GoToWar(player);
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} chooses to chop",player.Name);
+                        player.Balance += Convert.ToInt32(player.CurrentBet * 0.5);
+                    }
+
+                }
+
+            }
+            foreach (Player player in Players)
+            {
+                warDealer.ClearHand(player);
+            }
+
+            warDealer.ClearSelf();         
+        }
+
     }
 }

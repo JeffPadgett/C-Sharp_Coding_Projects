@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,18 +27,19 @@ namespace War
         public List<Card> Cards { get; set; }
 
 
-        public void Shuffle(int times = 1)
+        public void Shuffle<T>() //Best shuffle, Other shuffle runs off the CPUs clock, This is an algrathom that is closest to true random that uses cryptography. 
         {
-            List<Card> TempList = new List<Card>();
-            Random random = new Random();
-
-            while (Cards.Count > 0)
+            IList<Card> list = this.Cards;
+            RNGCryptoServiceProvider provider = new RNGCryptoServiceProvider();
+            int n = list.Count;
+            while (n > 1)
             {
-                int randomIndex = random.Next(0, Cards.Count);
-                TempList.Add(Cards[randomIndex]);
-                Cards.RemoveAt(randomIndex);
+                byte[] box = new byte[1];
+                do provider.GetBytes(box);
+                while (!(box[0] < n * (Byte.MaxValue / n))); int k = (box[0] % n); n--;
+                Card value = list[k];
+                list[k] = list[n]; list[n] = value;
             }
-            Cards = TempList;
         }
 
     }

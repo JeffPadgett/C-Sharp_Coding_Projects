@@ -10,36 +10,53 @@ namespace War
     {
         static void Main(string[] args)
         {
-            WarDeck blueWarDeck = new WarDeck();
-            Console.WriteLine(blueWarDeck);
-            Console.ReadLine();
+
+            StartGame();
+
+
+
+        }
+
+        public static void StartGame()
+        {
+            System.Console.Clear();
             Console.WriteLine("Welcome to War! \nHow many players are there? ");
             int numberOfPlayers = Convert.ToInt32(Console.ReadLine());
-            if (numberOfPlayers > 1)
+            if (numberOfPlayers > 6)
             {
-                Console.WriteLine("I am sorry, we can only have one player at this time"); //Just to make it playable for now until I add additonal player functionality.
+                Console.WriteLine("There are too many players, The max amount of players allowed is 6");
+                Console.WriteLine("Press any key to restart...");
+                Console.ReadLine();
+                StartGame();              
             }
-            Console.WriteLine("What is your name?");
-            string playerName = Console.ReadLine();
-            Console.WriteLine("How many chips are you buying in for?");
-            int chipStack = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Would you like to play War right now {0}?", playerName);
-            string answer = Console.ReadLine().ToLower();
-            if (answer == "yes" || answer == "ya" || answer == "yes please" || answer =="y")
+
+            List<Player> tempPlayers = new List<Player>();
+            for (int i = 0; i < numberOfPlayers; i++)
             {
-                Player player = new Player(playerName, chipStack);
+                Console.WriteLine("What is the name of player {0}", i+1);
+                string playerName = Console.ReadLine();
+                Console.WriteLine("How many chips is this player buying in for?");
+                int chipStack = Convert.ToInt32(Console.ReadLine());
+                tempPlayers.Add(new Player(playerName, chipStack));
+            }
+            Console.WriteLine("Would you like to play War right now?");
+            string answer = Console.ReadLine().ToLower();
+            if (answer == "yes" || answer == "ya" || answer == "yes please" || answer == "y")
+            {                
                 Game game = new WarGame();
+                foreach (Player player in tempPlayers)
+                {
+                    player.Game = game;
                 game += player;
                 player.isActivelyPlaying = true;
-                while (player.isActivelyPlaying && player.Balance > 0)
+                }
+                while (game.Players.Count() > 0)
                 {
                     game.Play();
                 }
             }
-            
-
-
-            
         }
+
+
     }
 }

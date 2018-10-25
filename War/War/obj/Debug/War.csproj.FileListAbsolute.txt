@@ -4,3 +4,9 @@ c:\users\jp171\documents\visual studio 2015\Projects\War\War\bin\Debug\War.pdb
 c:\users\jp171\documents\visual studio 2015\Projects\War\War\obj\Debug\War.csprojResolveAssemblyReference.cache
 c:\users\jp171\documents\visual studio 2015\Projects\War\War\obj\Debug\War.exe
 c:\users\jp171\documents\visual studio 2015\Projects\War\War\obj\Debug\War.pdb
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\War\War\bin\Debug\War.exe.config
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\War\War\obj\Debug\War.exe
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\War\War\obj\Debug\War.pdb
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\War\War\obj\Debug\War.csprojResolveAssemblyReference.cache
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\War\War\bin\Debug\War.exe
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\War\War\bin\Debug\War.pdb
