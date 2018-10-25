@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Poker;
+using Poker.TwentyOne;
 
 
 namespace TwentyOne

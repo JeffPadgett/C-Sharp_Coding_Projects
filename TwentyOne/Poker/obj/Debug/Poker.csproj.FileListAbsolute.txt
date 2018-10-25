@@ -1,0 +1,5 @@
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\Poker\bin\Debug\Poker.dll
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\Poker\bin\Debug\Poker.pdb
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\Poker\obj\Debug\Poker.csprojResolveAssemblyReference.cache
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\Poker\obj\Debug\Poker.dll
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\Poker\obj\Debug\Poker.pdb

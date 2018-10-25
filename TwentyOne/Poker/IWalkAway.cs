@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwentyOne
+namespace Poker.Interfaces
 {
     interface IWalkAway //Naming convention is to start interfaces always with an uppercase letter.
     {

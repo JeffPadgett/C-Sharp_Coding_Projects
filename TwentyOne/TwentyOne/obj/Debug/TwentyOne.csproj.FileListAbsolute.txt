@@ -4,3 +4,5 @@ C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\Twenty
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.exe
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\TwentyOne.pdb
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\obj\Debug\TwentyOne.csprojResolveAssemblyReference.cache
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\Poker.dll
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\TwentyOne\TwentyOne\bin\Debug\Poker.pdb
