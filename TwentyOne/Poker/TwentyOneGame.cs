@@ -37,7 +37,7 @@ namespace Poker.TwentyOne
                 }
                 if (bet < 0)
                 {
-                    throw new FraudExcepetion();
+                    throw new FraudExcepetion("Security! Kick this person out. ");
                 }
                 
                 bool successfullyBet = player.Bet(bet);
