@@ -10,10 +10,18 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to BestBet! Let's start by telling me your name. ");
+            const string pokerRoomName = "BestBet";
+            Console.WriteLine("Welcome to {0}! Let's start by telling me your name. ", pokerRoomName);
             string playerName = Console.ReadLine();
-            Console.WriteLine("How many chips do you want?");
-            int chips = Convert.ToInt32(Console.ReadLine());
+
+            bool validAnswer = false;
+            int chips = 0;
+            while (!validAnswer)
+            {
+                Console.WriteLine("How much money did you bring today?");
+                validAnswer = int.TryParse(Console.ReadLine(), out chips);
+                if (!validAnswer) Console.WriteLine("Please enter digits only, and no decimals");
+            }
             Console.WriteLine("Hello, {0}. Would you like to play Black Jack right now?", playerName);
             string answer = Console.ReadLine().ToLower();
 
@@ -26,7 +34,22 @@ namespace TwentyOne
                 player.isActivelyPlaying = true;
                 while (player.isActivelyPlaying && player.Balance > 0)
                 {
-                    game.Play();
+                    try
+                    {
+                        game.Play();
+                    }
+                    catch (FraudExcepetion)
+                    {
+                        Console.WriteLine("You were thrown out by security");
+                        Console.ReadLine();
+                        return;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("An error has occured. Please contact your System Administrator.");
+                        Console.ReadLine();
+                        return;
+                    }
                 }
                 game -= player;
                 Console.WriteLine("Thank you for playing!");

@@ -36,3 +36,19 @@ Five of Clubs
 
 King of Diamonds
 
+Ace of Hearts
+
+Seven of Hearts
+
+Ten of Spades
+
+Jack of Spades
+
+Four of Clubs
+
+Ten of Clubs
+
+Queen of Hearts
+
+Six of Hearts
+
