@@ -35,7 +35,7 @@ namespace War
         }
 
 
-        public bool CompareHands(Player p)
+        public bool CompareHands(Player p, bool atWar)
         {
             if (p.Hand[0].Face > Hand[0].Face)
             {
@@ -51,7 +51,9 @@ namespace War
             }
             else
             {
-                Console.WriteLine("Do you want to go to war? Y or N \n If you choose no it will cut half your bet. \n If you choose yes you will need to match your bet and we will draw for a new card to see who wins." );
+                if(!atWar)
+                    Console.WriteLine("Do you want to go to war? Y or N \n If you choose no it will cut half your bet. \n If you choose yes you will need to match your bet and we will draw for a new card to see who wins." );
+
                 return true;
 
             }

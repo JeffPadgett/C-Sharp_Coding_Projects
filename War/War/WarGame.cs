@@ -10,6 +10,7 @@ namespace War
     {
         Dealer warDealer = new Dealer();
         public static List<Card> disCards;
+        bool atWar { get; set; }
         
           
         public WarGame()
@@ -31,6 +32,8 @@ namespace War
 
         public void GoToWar(Player p)
         {
+            warDealer.ClearHand(p);
+            warDealer.ClearSelf();
             warDealer.BurnCard();
             warDealer.BurnCard();
             warDealer.BurnCard();
@@ -39,18 +42,18 @@ namespace War
             warDealer.BurnCard();
             warDealer.BurnCard();
             warDealer.DealSelf();
-            warDealer.CompareHands(p);
+            warDealer.CompareHands(p, true);
         }
 
 
         public override void Play()
         {
-
+         
             foreach (Player player in Players)
             {
                 if (!player.isActivelyPlaying)
                     continue;
-                Console.WriteLine(player.Name + " has $" + player.Balance );
+                Console.WriteLine(player.Name + " has $" + player.Balance);
                 Console.Write(player.Name + " Place your bet: $ ");
                 WarBet(player);
 
@@ -66,20 +69,33 @@ namespace War
 
             warDealer.DealSelf();
             
+            
             foreach (Player player in Players)
             {
                 if (!player.isActivelyPlaying)
                     continue;
-                if (warDealer.CompareHands(player))
+                if (warDealer.CompareHands(player, false))
                 {
+                    if(atWar)
+                    {
+                        //atWar = true;
+                        Console.WriteLine("{0} goes to war.", player.Name);
+                        GoToWar(player);
+                    }
                     string answer = Console.ReadLine();
                     if (answer.ToLower() == "y")
                     {
+                        atWar = true;
                         Console.WriteLine("{0} goes to war.",player.Name);
+                        player.Balance -= player.CurrentBet;
+                        Console.WriteLine("Balance: " + player.Balance);
+                        player.CurrentBet = player.CurrentBet * 2;
+                        Console.WriteLine("Bet: " + player.CurrentBet);
                         GoToWar(player);
                     }
                     else
                     {
+                        atWar = false;
                         Console.WriteLine("{0} chooses to chop",player.Name);
                         player.Balance += Convert.ToInt32(player.CurrentBet * 0.5);
                     }
