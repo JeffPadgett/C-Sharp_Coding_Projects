@@ -13,6 +13,19 @@ namespace NewsLetterAppMVC.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult SignUp(string firtsName, string lastName, string emailAddress)
+        {
+            if (string.IsNullOrEmpty(firtsName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(emailAddress))
+            {
+                return View("~/Views/Shared/Error.cshtml");
+            }
+            else
+            {
+                return View("Success");
+            }
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
