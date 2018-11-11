@@ -14,6 +14,8 @@ namespace InsuranceQuoteGenerator
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute("Home", "", new { controller = "Estimate", action = "Index" });
+
+            routes.MapRoute("Login", "login", new { controller = "Auth", action = "Login" });
         }
     }
 }

@@ -1,0 +1,37 @@
+﻿@model InsuranceQuoteGenerator.ViewModels.AuthLogin
+
+
+@{ 
+    ViewBag.Title = "Login";
+}
+
+<p>
+    The value of test in our model, is @Model.Test
+</p>
+
+
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(x => x.Username)
+        @Html.EditorFor(x => x.Username)
+    </div>
+
+    <div>
+        @Html.LabelFor(x => x.Password)
+        @Html.EditorFor(x => x.Password)
+    </div>
+
+    <div>
+        <input type="submit" value="Login" />
+    </div>
+}
+
+@*<form method="POST">                                           <------------OLD Method that is not strongly typed
+    <input type="text" name="Username" />
+    <input type="password" name="Password" />
+    <input type="submit" value="Login" />
+</form>*@
+
+
