@@ -1,4 +1,6 @@
-﻿@{ 
+﻿@using System.Web.Optimization
+
+@{ 
     Layout = null;
 }
 
@@ -9,12 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Insurance Estimate Application</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/styles")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div class="container">
         <div class="row">
             <h3 class="table-bordered text-center text-capitalize">Insurance Quote Application</h3>
+            <i class="glyphicon glyphicon-apple"></i>
         </div>
     </div>
 

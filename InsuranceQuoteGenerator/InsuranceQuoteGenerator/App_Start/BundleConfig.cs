@@ -25,6 +25,11 @@ namespace InsuranceQuoteGenerator
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            // Mainually added bundles for testing ect. 
+
+            bundles.Add(new StyleBundle("~/styles")
+                .Include("~/Content/Styles/Site.css"));
         }
     }
 }
