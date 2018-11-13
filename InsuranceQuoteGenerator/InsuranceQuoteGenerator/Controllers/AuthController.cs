@@ -15,7 +15,6 @@ namespace InsuranceQuoteGenerator.Controllers
         {
             return View(new AuthLogin
             {
-                Test = "This is a test"
 
             });
         }
@@ -23,7 +22,18 @@ namespace InsuranceQuoteGenerator.Controllers
         [HttpPost]
         public ActionResult Login(AuthLogin form)
         {
-            return Content("Hey there " + form.Username + "You set your password to " + form.Password);
+            if (!ModelState.IsValid)
+                return View(form);
+
+            if (form.Username != "Admin".ToLower() || form.Username != "User".ToLower())
+            {
+                ModelState.AddModelError("Username", "Please enter Admin or User as your username to define access restriction. Password is Pass");
+                return View(form);
+            }
+
+
+            return Content("The from is valid.");
+
         }
     }
 }
