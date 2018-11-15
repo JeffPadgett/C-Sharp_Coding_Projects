@@ -10,7 +10,12 @@ namespace InsuranceQuoteGenerator.Infrastructure
         //This is really the only method needed. The rest you want to throw an exception, If anyone tries to access it you want to be notified right away.
         public override string[] GetRolesForUser(string username)
         {
-            return new[] { "admin" }; //This is how we tell ASP.NET that a particular person has access to a particular thing. 
+
+             //This is how we tell ASP.NET that a particular person has access to a particular thing. 
+            if (username == "admin")
+                return new[] {"admin"};
+
+            return new string[] { };
         }
 
         public override string ApplicationName

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 namespace InsuranceQuoteGenerator.Controllers
 {
     [Authorize(Roles = "admin")]
+    [Authorize(Roles = "user")]
     public class UsersController : Controller
     {
         

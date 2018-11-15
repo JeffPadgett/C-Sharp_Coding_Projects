@@ -9,18 +9,28 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Insurance Estimate Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/styles")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="container">
+    <header>
         <div class="row">
-            <h3 class="table-bordered text-center text-capitalize">Insurance Quote Application</h3>
-            <i class="glyphicon glyphicon-apple"></i>
+            <h1 class="table-bordered text-center text-capitalize">Insurance Quote Application</h1>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <p>Welcome back @User.Identity.Name</p>
+                <a href="@Url.RouteUrl("logout")">Logout</a>
+
+                if (User.IsInRole("admin"))
+                {
+                    <a href="@Url.Action("Admin", "Auth", new {area="admin"})">View post in admin</a>
+                }
+            }
+            <a href="@Url.RouteUrl("login")">Login</a>
         </div>
-    </div>
+    </header>
 
         @RenderBody()
         <hr />

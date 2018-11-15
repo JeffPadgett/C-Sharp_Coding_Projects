@@ -198,6 +198,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Estimate\Index.cshtml" />
     <Content Include="Views\Auth\Login.cshtml" />
+    <Content Include="Views\Auth\Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
