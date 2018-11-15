@@ -1,10 +1,47 @@
-﻿
+﻿@model InsuranceQuoteGenerator.Models.InsuranceQuote
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-    <div>
-        <h1>This is where the actual application will exist and await for user input. </h1>
+<h2 class="text-center">Please fill out the information below</h2>
+<form>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
     </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.EmailAddress)
+        @Html.TextBoxFor(m => m.EmailAddress, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DateOfBirth)
+        @Html.DatePickerFor(m => m.DateOfBirth)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CarYear)
+        @Html.TextBoxFor(m => m.CarYear, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CarMake)
+        @Html.TextBoxFor(m => m.CarMake, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CarModel)
+        @Html.TextBoxFor(m => m.CarModel, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DUI)
+        @Html.DropDownListFor(m => m.DUI, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+    </div>
+    <div class="form-group"></div>
+    <div class="form-group"></div>
+    <div class="form-group"></div>
+
+</form>
 

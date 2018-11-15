@@ -9,7 +9,9 @@ namespace InsuranceQuoteGenerator
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/moment.js")); //Added for bootstrap date time picker
+
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -20,16 +22,20 @@ namespace InsuranceQuoteGenerator
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/respond.js",
+                      "~/Scripts/bootstrap-datepicker.js")); //Added for bootstrap date time picker
+
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/bootstrap-datepicker.css")); //Added for bootstrap date time picker
 
             // Mainually added bundles for testing ect. 
 
-            bundles.Add(new StyleBundle("~/styles")
-                .Include("~/Content/Styles/Site.css"));
+            //bundles.Add(new StyleBundle("~/styles")
+            //    .Include("~/Content/Styles/Site.css"));
         }
     }
 }

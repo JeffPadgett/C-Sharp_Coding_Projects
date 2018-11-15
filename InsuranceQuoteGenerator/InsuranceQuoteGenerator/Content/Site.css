@@ -1,6 +1,12 @@
-﻿body {
+﻿*{
+    background-color: gray;
+    
+}
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    
 }
 
 /* Set padding to keep content from hitting the edges */

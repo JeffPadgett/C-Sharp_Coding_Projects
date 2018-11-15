@@ -87,3 +87,7 @@ C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\InsuranceQuoteGe
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\InsuranceQuoteGenerator\InsuranceQuoteGenerator\obj\Debug\InsuranceQuoteGenerator.csprojResolveAssemblyReference.cache
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\InsuranceQuoteGenerator\InsuranceQuoteGenerator\obj\Debug\InsuranceQuoteGenerator.dll
 C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\InsuranceQuoteGenerator\InsuranceQuoteGenerator\obj\Debug\InsuranceQuoteGenerator.pdb
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\InsuranceQuoteGenerator\InsuranceQuoteGenerator\bin\log4net.dll
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\InsuranceQuoteGenerator\InsuranceQuoteGenerator\bin\Migrations.dll
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\InsuranceQuoteGenerator\InsuranceQuoteGenerator\bin\log4net.xml
+C:\Users\jp171\Desktop\repository_files\C-Sharp_Coding_Projects\InsuranceQuoteGenerator\InsuranceQuoteGenerator\bin\WebActivatorEx.dll
