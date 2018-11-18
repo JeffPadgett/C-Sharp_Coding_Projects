@@ -18,19 +18,18 @@ namespace InsuranceWorld.Models
         public string DUI { get; set; }
         public int SpeedingTickets { get; set; }
         public string CoverageAnswer { get; set; }
-        public int Quote { get; set; }
+        public int Estimate { get; set; }
 
 
-        public static int GetQuote(string dateOfBirth, int carYear, string carMake, string carModel, int speedingTickets, string dUI, string coverageAnswer )
+        public static int GetQuote(string dateOfBirth, int carYear, string carMake, int speedingTickets, string dUI, string coverageAnswer )
         {
             int quoteStart = 50;
-            DateTime currentDate = DateTime.Today;
-            int userAge = Convert.ToInt16(currentDate - Convert.ToDateTime(dateOfBirth));
+            DateTime currentDate = DateTime.Now;
+            int userAge = Convert.ToInt16(currentDate.Year - Convert.ToDateTime(dateOfBirth).Year);
             int speedingPrice = speedingTickets * 10;
             string dUIAnswer = dUI.ToLower();
             string coverageType = coverageAnswer.ToLower();
             string carType = carMake.ToLower();
-            string carModelType = carModel.ToLower();
 
 
             if (userAge < 25 && userAge > 18)
@@ -47,12 +46,12 @@ namespace InsuranceWorld.Models
 
             if (carType == "porsche")
                 quoteStart += 25;
-            else if (carType == "porsche" && carModelType == "911 carrera")
+            else if (carType == "porsche" && carType == "911 carrera")
                 quoteStart += 25;
 
             if (dUIAnswer == "yes" || dUIAnswer == "ya")
             {
-                quoteStart = (quoteStart / 100) * 25;
+                quoteStart = (quoteStart / 100) * 25; //After debugging - The math is wrong here. 
             }
 
             if (coverageType == "full coverage")
