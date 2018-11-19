@@ -18,10 +18,10 @@ namespace InsuranceWorld.Models
         public string DUI { get; set; }
         public int SpeedingTickets { get; set; }
         public string CoverageAnswer { get; set; }
-        public int Estimate { get; set; }
+        public Decimal Estimate { get; set; }
 
 
-        public static int GetQuote(string dateOfBirth, int carYear, string carMake, int speedingTickets, string dUI, string coverageAnswer )
+        public static decimal GetQuote(string dateOfBirth, int carYear, string carMake, int speedingTickets, string dUI, string coverageAnswer )
         {
             int quoteStart = 50;
             DateTime currentDate = DateTime.Now;
@@ -30,6 +30,7 @@ namespace InsuranceWorld.Models
             string dUIAnswer = dUI.ToLower();
             string coverageType = coverageAnswer.ToLower();
             string carType = carMake.ToLower();
+            decimal quote;
 
 
             if (userAge < 25 && userAge > 18)
@@ -49,16 +50,18 @@ namespace InsuranceWorld.Models
             else if (carType == "porsche" && carType == "911 carrera")
                 quoteStart += 25;
 
+            quote = Convert.ToDecimal(quoteStart);
+
             if (dUIAnswer == "yes" || dUIAnswer == "ya")
             {
-                quoteStart = (quoteStart / 100) * 25; //After debugging - The math is wrong here. 
+                quote += (25 / 100) * quote;            
             }
 
             if (coverageType == "full coverage")
-                quoteStart = (quoteStart / 100) * 50;
+                quote += (50 / 100) * quote; ;
 
-           int finalQuote = quoteStart;
-           return finalQuote;
+           
+           return quote;
 
         }
     }
