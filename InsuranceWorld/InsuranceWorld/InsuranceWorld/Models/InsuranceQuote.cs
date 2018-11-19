@@ -54,11 +54,11 @@ namespace InsuranceWorld.Models
 
             if (dUIAnswer == "yes" || dUIAnswer == "ya")
             {
-                quote += (25 / 100) * quote;            
+                quote *= 1.25m;           
             }
 
             if (coverageType == "full coverage")
-                quote += (50 / 100) * quote; ;
+                quote *= 1.50m;
 
            
            return quote;
